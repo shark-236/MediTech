@@ -1,0 +1,4 @@
+Date of Entry,UserID,Group ,Sex,Consent/Terms & Conditions,Clinic Identifier,Trial Phase,Blood Pressure,Body Temp (C),Fasting,Medication Administered,Has Symptoms,Symptom 1,Symptom 2,Symptom 3,Result
+23/12/2022,JD1945,Test,M,Y,NY3516,2,120/80,37,N,Pill A,Y,Wet Cough,Fever,N/A,Degeneration
+24/12/2022,JD1945,Test,M,Y,NY3516,2,120/80,36.5,N,Pill A,Y,Wet Cough,N/A,N/A,Recovery
+23/12/2022,MS1375,Test,F,Y,NY3518,3,120/80,37.5,N,Pill B,N,N/A,N/A,N/A,No Change

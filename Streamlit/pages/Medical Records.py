@@ -34,7 +34,7 @@ def filter_data(
     return df
 
 def main() -> None:
-    st.header("Patient Information")
+    st.header("Patient Information Viewer")
 
     st.subheader("Upload your CSV")
     uploaded_data = st.file_uploader(
