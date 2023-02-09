@@ -1,8 +1,9 @@
 # MediTech
-Fintech Bootcamp Repository Project 3\
+Fintech Bootcamp Project 3
 
 ---
-> summary, code, and resources
+> A Secure Healthcare Ecosystem, Data Repository, and Platform
+>> summary, code, and resources
 ---
 
 ## Technologies
