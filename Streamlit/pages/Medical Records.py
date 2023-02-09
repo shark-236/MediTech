@@ -7,13 +7,15 @@ from st_aggrid.shared import JsCode
 from st_aggrid.grid_options_builder import GridOptionsBuilder
 import pandas as pd
 import plotly.express as px
+from datetime import datetime as dt
 
 
 @st.experimental_memo
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
     df = df.copy()
-    df.columns = df.columns.str.lower().str.replace(" ", "_", regex=False).str.replace("/", "_", regex=False)
+    df = df.rename({'Date of Entry':'Date'}, axis = 1)
+    df.iloc[:,0] = pd.to_datetime(df.iloc[:,0])
 
     df = df.fillna("unknown")
     df = df.dropna()
@@ -25,12 +27,11 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 def filter_data(
     df: pd.DataFrame, UserID_selections: list(), DoE_selections: list()
 ) -> pd.DataFrame:
-
     df = df.copy()
     df = df[
-        df.UserID.isin(UserID_selections) & df.loc[df.UserID.isin(UserID_selections), "Date of Entry"].isin(DoE_selections)
+        df.UserID.isin(UserID_selections) & df.Date.isin(DoE_selections.iloc[:,0])
     ]
-
+    
     return df
 
 def main() -> None:
@@ -43,7 +44,7 @@ def main() -> None:
 
     if uploaded_data is None:
         st.info("Using example data. Upload a file above to use your own data!")
-        uploaded_data = open("dummy.csv", "r")
+        uploaded_data = open("dummyhipaa.csv", "r")
     else:
         st.success("Uploaded your file!")
 
@@ -51,7 +52,7 @@ def main() -> None:
     with st.expander("Raw Dataframe"):
         st.write(df)
     
-    df2 = clean_data(df)
+    df = clean_data(df)
     with st.expander("Cleaned Data"):
         st.write(df)
 
@@ -61,24 +62,27 @@ def main() -> None:
     UserID_selections = st.sidebar.multiselect(
         "Select UserID to View", options=UserIDs, default=UserIDs
     )
+    
     st.sidebar.subheader("Filter by Date of Entry")
-
-    DoEs = list(df.loc[df.UserID.isin(UserID_selections), "Date of Entry"].unique())
-    DoE_selections = st.sidebar.multiselect(
-        "Select Dates of Entry to View", options=DoEs, default=DoEs
-    )
-
-    df = filter_data(df, UserID_selections, DoE_selections)
+    dts = st.sidebar.date_input(label='Date Range: ',
+                value=(dt(day=20, month=12, year=2022), 
+                        dt(day=30, month=12, year=2022)),
+                key='#date_range',
+                help="The start and end date time")
+    st.sidebar.write('Start: ', dts[0], "End: ", dts[1])
+    
+    daterange = pd.date_range(start = dts[0], end =dts[1]).to_frame(index=False) #making date range dataframe for filter
+    
+    df1 = filter_data(df, UserID_selections, daterange)
     st.subheader("Selected UserIDs and Dates of Entries")
 
-
-    gb = GridOptionsBuilder.from_dataframe(df)
+    gb = GridOptionsBuilder.from_dataframe(df1)
     
     gb.configure_pagination()
-    gb.configure_columns(("UserID", "Date of Entry"), pinned=True)
+    gb.configure_columns(("UserID", "Date"), pinned=True)
     gridOptions = gb.build()
 
-    AgGrid(df, gridOptions=gridOptions, allow_unsafe_jscode=True)
+    AgGrid(df1, gridOptions=gridOptions, allow_unsafe_jscode=True)
 
 
 if __name__ == "__main__":
