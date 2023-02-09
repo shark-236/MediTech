@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: Unlicensed
+
+pragma solidity ^0.5.17;
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/token/ERC721/ERC721Full.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-test-helpers/blob/master/contracts/Ownable.sol";
+
+
+contract PatientID is ERC721Full, Ownable {
+    uint256 public totalMints = 0;
+    uint256 public mintPrice = 1 wei;
+    mapping(address => uint256) private walletMints;
+    constructor() ERC721Full("PatientID", "PIDX") public {}
+    function safeMint(address to) internal {
+        uint256 tokenId = totalMints;
+        totalMints++;
+        _safeMint(to, tokenId);
+    }
+    function mintToken(uint256 One_Per_Transaction) public payable onlyOwner() {
+        walletMints[msg.sender] += One_Per_Transaction;
+        safeMint(msg.sender);
+    }
+    function getMyWalletMints() public view returns (uint256) {
+        return walletMints[msg.sender];
+    }
+    function ownerOf() public onlyOwner() {
+    }
+}
