@@ -1,7 +1,7 @@
 # MediTech
 ## Fintech Bootcamp Project 3  
 
-Goal: To develop a secure healthcare data ecosystem. complete with a data repository and user platform.  
+Goal: To develop a secure healthcare data ecosystem, complete with a data repository and user platform.  
 
 MediTech is the company responsible for integrating and launching the various components of the ecosystem. We start with data collection, storage, de-identification, and deployment. MediTech makes use of the following technologies to see the data through its lifecycle:  
 -Blockchain (for smart contracts and data logging)  
