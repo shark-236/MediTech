@@ -51,7 +51,7 @@ In its practical state, the MediTech ecosystem works as such:
 
 First, a clinical trial participant (henceforth referred to as "patient") and clinical trial agree on participation. To import initial patient data, patient identification will be hashed into an initial upload via smart contracts on a private blockchain. Other initial contracts include consent agreements and business agreements. This data is then fed into a secure MediTech server to protect patient privacy.   
 
-MediTech will then create an NFT for each patient and, within the secure environment, assign theur unique IDs and private keys. These relationships will only be accessible by MediTech. The NFT ID is what will be used in the actual trials and hashed onto the blockchain to record trial records and progress.  
+MediTech will then create an NFT for each patient and, within the secure environment, assign their unique IDs and private keys. These relationships will only be accessible by MediTech. The NFT ID is what will be used in the actual trials and hashed onto the blockchain to record trial records and progress.  
 
 Upon trial logs and participation, the records for the trial will be hashed onto the blockhain. This ensures data is immutable and available (which are two major challenges of data in the clinical trial space). An example of this is available in our repository under "Contracts" -> "Update_Log.sol". This file can be uploaded and launched through Remix. Remember to connect Ganache and MetaMask for pseudo-training accounts and contract deployment. Deploying through Remix will also allow us to save the ABI for the contract. The ABI is used to connect the contract through Streamlit to provide clinicians with an easy-to-use interface. The ABI save file, the code that creates the NFT, and the Streamlit NFT interface files are housed in this repo under "Contracts" -> "contracts".   
 
@@ -62,6 +62,24 @@ For those that could not attend our presentation, the Market Analysis and Regula
 ---
 
 ## Explanation of Compliance Considerations  
+
+The healthcare industry presents particular challenges specifically regarding data collection and use. To comply with HIPAA and GDPR regulations, MediTech uses a secure server (with only company access) to house patient identifying information. As well, the keys translating the patient and unique NFT IDs are also under MediTech control. The only public information will be the NFT IDs and the trial logs, available on the blockchain.   
+
+Market analysis shows growth in R&D for pharmaceutical companies and the like. This growth creates the need for easily accessible, transmittable, and immutable data. Of course, MediTech would not disclose patient identifying information without the patient's consent. However, the tracking of trial logs through their phases, and the ability to link NFT IDs through history, will help prove trial success.  
+
+---
+
+## Future Iterations and Advancements  
+
+This ecosystem has the potential to expand deep into the medical field. There are additional optimizations for the ecosystem that can be deployed, which we will briefly touch on below:  
+
+NFTs: We will create digital wallets for each patient to house their NFTs securely. They can be wearable devices, such as bracelets, that the patient keeps with them. These wallets will have additional security through biometric identification confirmation (ex. fingerprints).   
+
+Smart Contracts: will see variations invluding initial patient information gatering, consent agreements, and business associate agreements. All contracts will be advanced to include admin permissions, view-only permissions, or restricted access (depending on use-case). The contract ABIs will also allow us to directly gather inputted information and collate them into a secure server database, which can then be de-identified, parsed, and sold.   
+
+Expansion: There is much opportunity for this product to expand further into the medical field; for example, hospitals and doctor’s offices (where medical data is generated) and insurance companies (who have a large need to view and use medical data). This is where the monetization of data comes in and plays to MediTech’s favor as we barter the de-identified data out.   
+
+Crowdfunding: To create funds for initial launch and seed funding. 
 
 ---
 
