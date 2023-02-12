@@ -61,9 +61,9 @@ For those that could not attend our presentation, the Market Analysis and Regula
 
 ---
 
-## Explanation of Privacy Considerations  
+## Explanation of Compliance Considerations  
 
-<<<<<<< HEAD
+
 The healthcare industry presents particular challenges specifically regarding data collection and use. To comply with HIPAA and GDPR regulations, MediTech uses a secure server (with only company access) to house patient identifying information. As well, the keys translating the patient and unique NFT IDs are also under MediTech control. The only public information will be the NFT IDs and the trial logs, available on the blockchain. Examples of protected patient information include:  
 -Dates of birth  
 -Telephone numbers  
@@ -82,11 +82,6 @@ The healthcare industry presents particular challenges specifically regarding da
 -Full face photos and comparable images  
 -Biometric identifiers (i.e. retinal scans, fingerprints)  
 -Any unique identifying number or code (except unique codes assigned to code data)  
-=======
-The healthcare industry presents particular challenges specifically regarding data collection and use. In particular, information relating to the physical or mental health or condition of an individual that is transmitted or maintained by electronic media affords regulatory protections that MediTech needs to comply with (ie. HIPAA in the US requires protection of PHI and GDPR in the EU requires protection of sensitive data). Protected health data includes name, address, dates, phone number, SSN, health plan beneficiary number, biometric IDs, such as a fingerprint, and any other unique identifying characteristics.  
-
-To follow privacy regulations, MediTech uses a secure server (with only company access) to house patient identifying information. In addition, the keys translating the patient and unique NFT IDs are also under MediTech control. The only public information will be the NFT IDs and the trial logs, available on the blockchain. Future iterations will include additional privacy-enhancing techologies, similar to the ones implemented by Monero, with the use of stealth addresses, or PETchain, whereby data is stored securely in a distributed manner and processed in a user-selected execution environment.  
->>>>>>> 865a13e31a5b060caa7cbe4d3016d0a1391b0018
 
 Market analysis shows growth in R&D for pharmaceutical companies and the like. This growth creates the need for easily accessible, transmittable, and immutable data. Of course, MediTech would not disclose patient identifying information without the patient's consent. However, the tracking of trial logs through their phases, and the ability to link NFT IDs through history, will help prove trial success. For more details on the Market Analysis please refer to our presentation (available in this repository). 
 
