@@ -63,9 +63,26 @@ For those that could not attend our presentation, the Market Analysis and Regula
 
 ## Explanation of Compliance Considerations  
 
-The healthcare industry presents particular challenges specifically regarding data collection and use. To comply with HIPAA and GDPR regulations, MediTech uses a secure server (with only company access) to house patient identifying information. As well, the keys translating the patient and unique NFT IDs are also under MediTech control. The only public information will be the NFT IDs and the trial logs, available on the blockchain.   
+The healthcare industry presents particular challenges specifically regarding data collection and use. To comply with HIPAA and GDPR regulations, MediTech uses a secure server (with only company access) to house patient identifying information. As well, the keys translating the patient and unique NFT IDs are also under MediTech control. The only public information will be the NFT IDs and the trial logs, available on the blockchain. Examples of protected patient information include:  
+-Dates of birth  
+-Telephone numbers  
+-Geographic data  
+-Fax numbers  
+-Social Security numbers   
+-Email addresses  
+-Medical record numbers  
+-Account numbers  
+-Health plan beneficiary numbers  
+-Certificate/License numbers  
+-Vehicle identifiers and serial numbers (including license plates)  
+-Web URLs  
+-Device identifiers and serial numbers  
+-Internet protocol addresses  
+-Full face photos and comparable images  
+-Biometric identifiers (i.e. retinal scans, fingerprints)  
+-Any unique identifying number or code (except unique codes assigned to code data)  
 
-Market analysis shows growth in R&D for pharmaceutical companies and the like. This growth creates the need for easily accessible, transmittable, and immutable data. Of course, MediTech would not disclose patient identifying information without the patient's consent. However, the tracking of trial logs through their phases, and the ability to link NFT IDs through history, will help prove trial success.  
+Market analysis shows growth in R&D for pharmaceutical companies and the like. This growth creates the need for easily accessible, transmittable, and immutable data. Of course, MediTech would not disclose patient identifying information without the patient's consent. However, the tracking of trial logs through their phases, and the ability to link NFT IDs through history, will help prove trial success. For more details on the Market Analysis please refer to our presentation (available in this repository). 
 
 ---
 
