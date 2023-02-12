@@ -95,6 +95,8 @@ NFTs: We will create digital wallets for each patient to house their NFTs secure
 
 Smart Contracts: will see variations invluding initial patient information gatering, consent agreements, and business associate agreements. All contracts will be advanced to include admin permissions, view-only permissions, or restricted access (depending on use-case). The contract ABIs will also allow us to directly gather inputted information and collate them into a secure server database, which can then be de-identified, parsed, and sold.   
 
+Security: Additional levels of security on the blockchain (akin to what the developers of Monero have deployed using the CryptoNote protocol).   
+
 Expansion: There is much opportunity for this product to expand further into the medical field; for example, hospitals and doctor’s offices (where medical data is generated) and insurance companies (who have a large need to view and use medical data). This is where the monetization of data comes in and plays to MediTech’s favor as we barter the de-identified data out.   
 
 Crowdfunding: To create funds for initial launch and seed funding. 
