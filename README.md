@@ -1,5 +1,4 @@
-# MediTech     
-## Fintech Bootcamp Project 3  
+# MediTech      
 
 Goal: To develop a secure healthcare data ecosystem, complete with a data repository and user platform.  
 
